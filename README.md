@@ -716,4 +716,119 @@ $ git log --graph
 |     chore: this is the commit for the 4th test
 |
 * commit e4744a08b30e2268795804bd5e55d1335bf68c73 (origin/main, origin/HEAD)
-:$
+:$implemented functionality for new feature
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git checkout ft/new-feature
+error: pathspec 'ft/new-feature' did not match any file(s) known to git    
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git branch ft/new-feature
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git branch ft/new-feature
+fatal: a branch named 'ft/new-feature' already exists
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git checkout ft/new-feature
+Switched to branch 'ft/new-feature'
+
+The Gym@Kevin MINGW32 ~/Git-exercise (ft/new-feature)
+ with some introductory content. Commit these changes with a message like "$ vi feature.txt
+
+The Gym@Kevin MINGW32 ~/Git-exercise (ft/new-feature)
+$ git add .
+warning: in the working copy of 'feature.txt', LF will be replaced by CRLF the next time Git touches it
+
+The Gym@Kevin MINGW32 ~/Git-exercise (ft/new-feature)
+$ git commit -m "Implemented core functionality for new feature"
+[ft/new-feature dba2a4d] Implemented core functionality for new feature    
+ 2 files changed, 2 insertions(+)
+ create mode 100644 feature.txt
+ create mode 100644 unwanted.txt
+
+The Gym@Kevin MINGW32 ~/Git-exercise (ft/new-feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ vi readme.txt
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git add readme.txt 
+warning: in the working copy of 'readme.txt', LF will be replaced by CRLF the next time Git touches it
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git commit -m "Updated project readme"
+[main dfb8f86] Updated project readme
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.txt
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ ls 
+README.md  readme.txt  test1.md  test2.md  test3.md  test4.md  test5.md
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git checkout -d ft/new-feature  
+HEAD is now at dba2a4d Implemented core functionality for new feature
+
+The Gym@Kevin MINGW32 ~/Git-exercise ((dba2a4d...))
+$ git branch  -d ft/new-feature
+Deleted branch ft/new-feature (was dba2a4d).
+
+The Gym@Kevin MINGW32 ~/Git-exercise ((dba2a4d...))
+$ git checkout main
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  dba2a4d Implemented core functionality for new feature
+
+If you want to keep it by creating a new branch, this may be a good time   
+to do so with:
+
+ git branch <new-branch-name> dba2a4d
+
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git log 
+commit dfb8f861b4a4111ea463f981b7051cfcdff02b01 (HEAD -> main)
+Author: Kevin-gram <k.nyiringan@alustudent.com>
+Date:   Tue May 21 16:03:01 2024 +0200
+
+    Updated project readme
+
+commit ea30c35f8d0bc68872c83694ecd488d3d4e697bf
+Author: Kevin-gram <k.nyiringan@alustudent.com>
+Date:   Tue May 21 15:26:42 2024 +0200
+
+    Implemented test 5
+
+commit 1537fe484aa7f1cd10137112844f0f2dbad618f8
+Author: Kevin-gram <k.nyiringan@alustudent.com>
+Date:   Tue May 21 11:33:35 2024 +0200
+
+    chore: Create initial file
+
+    chore: Create another file
+
+commit dd69f7a887c7e19d3f06ac55bb0a2b64566b3a75
+Author: Kevin-gram <k.nyiringan@alustudent.com>
+Date:   Tue May 21 11:35:42 2024 +0200
+
+    chore: this is the commit for the 4th test
+
+commit e4744a08b30e2268795804bd5e55d1335bf68c73 (origin/main, origin/HEAD) 
+Author: Junior Hirwa <117777634+HIRWA13@users.noreply.github.com>
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git checkout -b ft/new-branch-from-commit 1895d691557bda1fa5b4be3689f4a86
+a4630de97
+Switched to a new branch 'ft/new-branch-from-commit'
+
+The Gym@Kevin MINGW32 ~/Git-exercise (ft/new-branch-from-commit)
+$
