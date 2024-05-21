@@ -831,4 +831,68 @@ a4630de97
 Switched to a new branch 'ft/new-branch-from-commit'
 
 The Gym@Kevin MINGW32 ~/Git-exercise (ft/new-branch-from-commit)
-$
+The Gym@Kevin MINGW32 ~/Git-exercise (ft/new-branch-from-commit)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git merge ft/new-branch-from-commit
+Merge made by the 'ort' strategy.
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git rebase ft/new-branch-from-commit
+dropping ea30c35f8d0bc68872c83694ecd488d3d4e697bf Implemented test 5 -- patch contents already upstream
+Successfully rebased and updated refs/heads/main.
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git branch -m ft/new-branch-from-commit ft/improved-branch-name
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git log 
+commit 6d815e2bb4fb6e5294b3949172592b0eca20006c (HEAD -> main)
+Author: Kevin-gram <k.nyiringan@alustudent.com>
+Date:   Tue May 21 16:03:01 2024 +0200
+
+    Updated project readme
+
+commit 1895d691557bda1fa5b4be3689f4a86a4630de97 (ft/improved-branch-name, ft/branch)
+Author: Kevin-gram <k.nyiringan@alustudent.com>
+Date:   Tue May 21 15:26:42 2024 +0200
+
+    Implemented test 5
+
+commit 1537fe484aa7f1cd10137112844f0f2dbad618f8
+Author: Kevin-gram <k.nyiringan@alustudent.com>
+Date:   Tue May 21 11:33:35 2024 +0200
+
+    chore: Create initial file
+
+    chore: Create another file
+
+commit dd69f7a887c7e19d3f06ac55bb0a2b64566b3a75
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git checkout 1537fe484aa7f1cd10137112844f0f2dbad618f8
+Note: switching to '1537fe484aa7f1cd10137112844f0f2dbad618f8'.
+
+You are in 'detached HEAD' state. You can look around, make experimental   
+changes and commit them, and you can discard any commits you make in this  
+state without impacting any branches by switching back to a branch.        
+
+If you want to create a new branch to retain commits you create, you may   
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 1537fe4 chore: Create initial file
+
+The Gym@Kevin MINGW32 ~/Git-exercise ((1537fe4...))
+$ \$
