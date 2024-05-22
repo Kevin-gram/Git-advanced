@@ -895,4 +895,151 @@ Turn off this advice by setting config variable advice.detachedHead to false
 HEAD is now at 1537fe4 chore: Create initial file
 
 The Gym@Kevin MINGW32 ~/Git-exercise ((1537fe4...))
-$ \$
+$ $ git stash
+No local changes to save
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ vi test1.md
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git stash
+warning: in the working copy of 'test1.md', LF will be replaced by CRLF the next time Git touches it
+Saved working directory and index state WIP on main: ab36c59 un needed changes
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git log 
+commit ab36c593f7403ab583a24cac3daab6c1d156e365 (HEAD -> main)
+Author: Kevin-gram <k.nyiringan@alustudent.com>
+Date:   Wed May 22 15:58:47 2024 +0200
+
+    un needed changes
+
+commit 6d815e2bb4fb6e5294b3949172592b0eca20006c
+Author: Kevin-gram <k.nyiringan@alustudent.com>
+Date:   Tue May 21 16:03:01 2024 +0200
+
+    Updated project readme
+
+commit 1895d691557bda1fa5b4be3689f4a86a4630de97 (ft/improved-branch-name, ft/branch)
+Author: Kevin-gram <k.nyiringan@alustudent.com>
+Date:   Tue May 21 15:26:42 2024 +0200
+
+    Implemented test 5
+
+commit 1537fe484aa7f1cd10137112844f0f2dbad618f8
+Author: Kevin-gram <k.nyiringan@alustudent.com>
+Date:   Tue May 21 11:33:35 2024 +0200
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git stash pop
+On branch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)    
+        modified:   test1.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (50a3a19f4aa86692f00f10dff32071cd773ab718)
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git checkout ft/new-branch-from-commit
+error: pathspec 'ft/new-branch-from-commit' did not match any file(s) known to git
+
+kevin here!
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git checkout ft/improved-branch-name
+error: Your local changes to the following files would be overwritten by checkout:
+        test1.md
+Please commit your changes or stash them before you switch branches.       
+Aborting
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git add .
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git commit -m "un needed changes"
+[main 60cdc22] un needed changes
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git checkout ft/improved-branch-name
+Switched to branch 'ft/improved-branch-name'
+
+The Gym@Kevin MINGW32 ~/Git-exercise (ft/improved-branch-name)
+$ vi test1.md
+
+The Gym@Kevin MINGW32 ~/Git-exercise (ft/improved-branch-name)
+$ git add .
+kevin here!
+warning: in the working copy of 'test1.md', LF will be replaced by CRLF the next time Git touches it
+
+The Gym@Kevin MINGW32 ~/Git-exercise (ft/improved-branch-name)
+$ git commit -m "Improved changes in the inner branche"
+[ft/improved-branch-name 1657bd9] Improved changes in the inner branche    
+ 1 file changed, 1 insertion(+)
+
+The Gym@Kevin MINGW32 ~/Git-exercise (ft/improved-branch-name)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git merge ft/improved-branch-name
+Auto-merging test1.md
+CONFLICT (content): Merge conflict in test1.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main|MERGING)
+$ vi test1.md
+
+/tmp
+The Gym@Kevin MINGW32 ~/Git-exercise (main|MERGING)
+$ git add .
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main|MERGING)
+$ git commit -m "merging the conflicts"
+[main 7f587af] merging the conflicts
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git checkout ft/improved-branch-name
+Switched to branch 'ft/improved-branch-name'
+
+The Gym@Kevin MINGW32 ~/Git-exercise (ft/improved-branch-name)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 8 commits.
+  (use "git push" to publish your local commits)
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ vi gitignore
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ vi gitignore
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git tag v1.0
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git tag
+v1.0
+
+The Gym@Kevin MINGW32 ~/Git-exercise (main)
+$ git tag -d v1.0 
+ Deleted tag 'v1.0' (was 7f587af)\$ $ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 967 bytes | 29.00 KiB/s, done.
+From https://github.com/Kevin-gram/Git-advanced
+   bbab6c0..07b3690  main       -> origin/main
+error: Your local changes to the following files would be overwritten by merge:
+        README.md
+Please commit your changes or stash them before you merge.
+Aborting
+Updating bbab6c0..07b3690
+
