@@ -895,6 +895,7 @@ Turn off this advice by setting config variable advice.detachedHead to false
 HEAD is now at 1537fe4 chore: Create initial file
 
 The Gym@Kevin MINGW32 ~/Git-exercise ((1537fe4...))
+<<<<<<< HEAD
 $ $ git stash
 No local changes to save
 
@@ -1043,3 +1044,4 @@ Please commit your changes or stash them before you merge.
 Aborting
 Updating bbab6c0..07b3690
 
+kevin
